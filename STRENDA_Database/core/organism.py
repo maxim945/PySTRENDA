@@ -1,12 +1,11 @@
 import sdRDM
 
 from typing import Optional, Union
+from typing import Optional
 from pydantic import PrivateAttr
+from pydantic import Field
 from sdRDM.base.listplus import ListPlus
 from sdRDM.base.utils import forge_signature, IDGenerator
-
-from pydantic import Field
-from typing import Optional
 
 
 @forge_signature
@@ -16,19 +15,17 @@ class Organism(sdRDM.DataModel):
         default_factory=IDGenerator("organismINDEX"),
         xml="@id",
     )
-    organism_name: Optional[str] = Field(
-        description="Organism name",
-        default=None,
-    )
+
+    organism_name: Optional[str] = Field(description="Organism name", default=None)
 
     ncbi_taxonomy_id: Optional[str] = Field(
-        description="NCBI Taxonomy ID to identify the organism",
-        default=None,
+        description="NCBI Taxonomy ID to identify the organism", default=None
     )
 
     __repo__: Optional[str] = PrivateAttr(
         default="git://github.com/maxim945/PySTRENDA.git"
     )
+
     __commit__: Optional[str] = PrivateAttr(
-        default="46e60bde92f126b86800c25d051b59dd7851ea7d"
+        default="1c847fc58cf14ea24075c0c271f5f2616aba1ab1"
     )
