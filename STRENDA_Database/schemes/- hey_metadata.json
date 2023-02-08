@@ -1,0 +1,112 @@
+{
+  "docstring": "PyEED is a Python-encoded data model of an Enzyme Engineering Database. It supports the scalable and reproducible analysis of sequence and structure data of protein families, and makes data and processes findable, accessible, interoperable, and reusable according to the FAIR data principles.",
+  "enums": [],
+  "external": {},
+  "ProteinSequence": {
+    "attributes": {
+      "protein_sequence_id": {
+        "description": "Presented protein sequence"
+      },
+      "name": {
+        "description": "Systematic name of the protein."
+      },
+      "amino_acid_sequence": {
+        "description": "The amino acid sequence of the protein sequence object."
+      },
+      "protein_database_name": {
+        "description": "Data base ID"
+      },
+      "protein_organism_id": {
+        "description": "Corresponding organism"
+      }
+    },
+    "docstring": null
+  },
+  "DNASequence": {
+    "attributes": {
+      "protein_sequence_id": {
+        "description": "Presented protein sequence"
+      },
+      "dna_sequence_id": {
+        "description": "Reference to the Translated DNA from the matching Protein sequence"
+      },
+      "nucleotide_sequence": {
+        "description": "The amino acid sequence of the protein sequence object."
+      },
+      "dna_database_id": {
+        "description": "Data base ID"
+      },
+      "dna_organism_id": {
+        "description": "NCBI Taxonomy ID to identify the organism"
+      }
+    },
+    "docstring": null
+  },
+  "Organism": {
+    "attributes": {
+      "organism_name": {
+        "description": "Organism name"
+      },
+      "ncbi_taxonomy_id": {
+        "description": "NCBI Taxonomy ID to identify the organism"
+      }
+    },
+    "docstring": null
+  },
+  "ProteinDatabase": {
+    "attributes": {
+      "database": {
+        "description": "Position in the sequence where the domain starts"
+      },
+      "link_to_database": {
+        "description": "Position in the sequence where the domain ends"
+      }
+    },
+    "docstring": null
+  },
+  "DNADatabase": {
+    "attributes": {
+      "database": {
+        "description": "Position in the sequence where the domain starts"
+      },
+      "link_to_database": {
+        "description": "Position in the sequence where the domain ends"
+      }
+    },
+    "docstring": null
+  },
+  "StandardNumberingScheme": {
+    "attributes": {
+      "protein_sequence_id": {
+        "description": "Presented protein sequence"
+      },
+      "standard_numering_scheme_id": {
+        "description": "the id of the scheme"
+      },
+      "standard_numering_scheme_name": {
+        "description": "the name of each standard numbering"
+      },
+      "standard_numering_scheme": {
+        "description": "the numbering scheme for each sequence"
+      }
+    },
+    "docstring": null
+  },
+  "Position": {
+    "attributes": {
+      "position_id": {
+        "description": "Equivalent position in the reference sequence"
+      },
+      "protein_sequence_id": {
+        "description": "Position that is equivalent to the reference sequence position that is also given"
+      },
+      "standard_numbering_scheme_id": {
+        "description": "Position that is equivalent to the reference sequence position that is also given"
+      },
+      "annotation_id": {
+        "description": "Function that is found in the annotated amino acid or sub-sequence"
+      }
+    },
+    "docstring": null
+  }
+}
